@@ -28,7 +28,7 @@ export const createApp = async (isSSR = false) => {
     { app, router },
     {
       client: !isSSR,
-      canonicalHost: 'https://fy-vue.com',
+      canonicalHost: 'https://google.com',
     }
   );
   return { app, router, head };

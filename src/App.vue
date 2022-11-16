@@ -5,6 +5,7 @@ import {
   defineWebSite,
   defineOrganization,
 } from '@vueuse/schema-org/runtime';
+import { useHead } from '@vueuse/head';
 useSchemaOrg([
   defineOrganization({
     name: 'test',
@@ -14,6 +15,15 @@ useSchemaOrg([
   }),
   defineWebPage({}),
 ]);
+useHead({
+  title: 'test 1',
+  meta: [
+    {
+      name: 'og:title',
+      content: 'test 2',
+    },
+  ],
+});
 </script>
 <template>
   <router-view />
